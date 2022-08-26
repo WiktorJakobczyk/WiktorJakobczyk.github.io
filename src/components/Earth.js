@@ -1,14 +1,13 @@
 import React, { useRef, useMemo } from "react";
-import { useEffect } from "react";
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
-import { OrbitControls, Points } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
 import EarthDayMap from "../assets/textures/8k_earth_daymap.jpg";
 import EarthNormalMap from "../assets/textures/8k_earth_normal_map.jpg";
 import MoonMap from "../assets/textures/moon.jpg";
-import { Group, TextureLoader } from "three";
-import { Star } from "react-bootstrap-icons";
+import {TextureLoader } from "three";
+
 
 const MOON_RADIUS = 2.8;
 let EARTH_LOADING_SCALE = 0.1; 
