@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { useEffect } from "react";
-import { useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, Points, Stars } from "@react-three/drei";
+import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { OrbitControls, Points } from "@react-three/drei";
 import * as THREE from "three";
 
 import EarthDayMap from "../assets/textures/8k_earth_daymap.jpg";
 import EarthNormalMap from "../assets/textures/8k_earth_normal_map.jpg";
 import MoonMap from "../assets/textures/moon.jpg";
 import { Group, TextureLoader } from "three";
+import { Star } from "react-bootstrap-icons";
 
 const MOON_RADIUS = 2.8;
 let EARTH_LOADING_SCALE = 0.1; 
@@ -51,9 +52,47 @@ export function Earth() {
 
   });
 
+  function Stars() {
+    let group = useRef();
+    let theta = 0;
+    useThree(() => {
+      if (group.current) {
+        const r = 5 * Math.sin(THREE.MathUtils.degToRad((theta += 0.01)));
+        const s = Math.cos(THREE.MathUtils.degToRad(theta * 2));
+        group.current.rotation.set(r, r, r);
+        group.current.scale.set(s, s, s);
+      }
+    });
+    const colors = ["#afc9ff ", "#a6a8ff", "#a87bff"]
+    const [geo, coords] = useMemo(() => {
+      const geo = new THREE.SphereBufferGeometry(Math.random() * (1 - 0.5) + 0.5, 10, 10);
+     
+      const coords = new Array(600)
+        .fill()
+        .map(i => [
+          Math.random() * 900 - 400,
+          Math.random() * 900 - 400,
+          Math.random() * 900 - 400
+        ]);
+      return [geo, coords];
+    }, []);
+  
+    return (
+      <group ref={group}>
+        {coords.map(([p1, p2, p3], i) => {
+          const mat = new THREE.MeshBasicMaterial({
+             color: new THREE.Color(colors[Math.floor(Math.random() * colors.length)])
+          });
+          return <mesh key={i} geometry={geo} material={mat} position={[p1, p2, p3]} />
+        }
+        )}
+      </group>
+    );
+  }
 
   return (
-    <>     
+    <>   
+           <Stars />
       <mesh ref={moonRef} position={[MOON_RADIUS, 0, 0]}>
         <sphereGeometry args={[0.15, 64, 64]} />
           <shaderMaterial
@@ -79,7 +118,6 @@ export function Earth() {
           }}
         />
       </mesh>
-      
       {/* <group ref={earthRef}> */}
       <mesh ref={earthRef} position={[0, 0, 0]}>
         <sphereGeometry args={[2, 128, 128]} />
@@ -101,7 +139,7 @@ export function Earth() {
 
               gl_FragColor =  vec4(atmosphere + texture2D(globeTexture, vertexUV).xyz, 1.0);;
           }"
-
+          opacity={0.5}
 
   
           uniforms= {{
@@ -145,6 +183,8 @@ export function Earth() {
         />
 
       </mesh>
+
+
 
     </>
   );
