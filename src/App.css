@@ -482,3 +482,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-image: url('./assets/img/BG-earth.png'); */
   height: 500px !important;
 }
+
+.corouselContainer {
+  width: 300px;
+  min-width: 300px;
+}
+
+.tab-content > .tab-pane {
+  visibility: hidden;
+  height: 0px;
+  overflow:hidden;
+}
+.tab-content > .active {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+}

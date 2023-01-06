@@ -16,7 +16,7 @@ export const Banner = () => {
 
               <div className={"animate__animated animate__fadeIn" }>
                 <h1>{`Hi! I'm Wiktor`} <br/><span>Java Developer</span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <p>I have been working as a Java Developer since 2021. I specialize in developing web applications using Spring and Hibernate. </p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>
           </Col>

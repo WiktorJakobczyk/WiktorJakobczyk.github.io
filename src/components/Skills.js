@@ -35,7 +35,7 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>I use a lot of technology in my work and I'm eager to learn new ones. <br/>e.g., ThreeJS for this interactive earth globe at the top. Try it out! :)</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <SkillCard imgSource={imgLogo} skillName="Spring Boot"/>
                             <SkillCard imgSource={hibernateLogo} skillName="Hibernate"/>
