@@ -14,9 +14,8 @@ export const Footer = () => {
           </Col>
           <Col size={32} sm={6} className="text-center">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+            <a href="https://www.linkedin.com/in/wiktor-jakobczyk99" target="_blank"><img src={navIcon1} alt="lD" /></a>
+            <a href="https://github.com/WiktorJakobczyk" target="_blank"><img src={navIcon2} alt="GH" /></a>
             </div>
             <p>Powered by React, ThreeJS</p>
           </Col>

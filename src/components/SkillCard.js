@@ -6,11 +6,11 @@ export const SkillCard = (params) => {
         <svg width="212" height="212" xmlns="http://www.w3.org/2000/svg" fill="none">
           <defs>
             <linearGradient id="svg_3" x1="-0.06095" y1="0.44713" x2="1.11825" y2="0.45146">
-            <stop stop-color="#1490ce" stop-opacity="0.98438" offset="0.01953"/>
-            <stop stop-color="#1a688c" offset="0.35547" stop-opacity="0.99219"/>
-            <stop offset="1" stop-color="#003e5c" stop-opacity="0.98828"/>
-            <stop stop-color="0" stop-opacity="0" offset="NaN"/>
-            <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+            <stop stopColor="#1490ce" stopOpacity="0.98438" offset="0.01953"/>
+            <stop stopColor="#1a688c" offset="0.35547" stopOpacity="0.99219"/>
+            <stop offset="1" stopColor="#003e5c" stopOpacity="0.98828"/>
+            <stop stopColor="0" stopOpacity="0" offset="NaN"/>
+            <stop stopColor="0" stopOpacity="0" offset="NaN"/>
             </linearGradient>
           </defs>
             <title>Layer 1</title>

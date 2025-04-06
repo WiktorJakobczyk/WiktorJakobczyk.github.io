@@ -224,7 +224,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 220px 0 100px 0;
+  padding: 220px 0 20px 0;
 }
 
 .banner h1 {
@@ -285,6 +285,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .hero p {
   text-align: justify;
 }
+.hero-bx {
+  background: #151515;
+  border-radius: 64px;
+  padding: 60px 50px;
+}
 
 /************ Skills Css ************/
 .backgroundBottom {
@@ -334,7 +339,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-desc p {
-  width: 70% !important;
+  width: 85% !important;
+}
+
+.project-desc h2 {
+  color: #1490ce;
 }
 
 .project-slider {
@@ -350,6 +359,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 80%;
 }
 
+
+.profile-pic-wrapper { 
+  width: 250px;
+  height: 250px;
+  border-radius: 100%; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+.profile-pic { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border: 2px solid #1490ce;
+	border-radius: 50%;
+	padding: 7px;
+}
 
 .project {
   padding: 80px 0;
@@ -432,34 +459,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 24px;
 }
 
-/* .proj-txtx {
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-} */
-
-
 /************ Footer Css ************/
 .footer {
   padding: 50px 0 50px 0;
@@ -477,9 +476,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
+.react-multiple-carousel__arrow {
+  background-color: #1490ced7 !important; /* Kolor tła strzałek */
+}
+
+
 /************ THREEJS CANVAS Css ************/
 .canvas {
-  /* background-image: url('./assets/img/BG-earth.png'); */
   height: 500px !important;
 }
 
@@ -498,3 +501,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
   overflow: visible;
 }
+
